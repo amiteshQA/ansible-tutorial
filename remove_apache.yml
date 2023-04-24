@@ -1,6 +1,8 @@
 ---
 - name: This playbook will install apache2
   hosts: all
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   become: true
   tasks:
   - name: add php support for apache
